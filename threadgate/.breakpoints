@@ -1,0 +1,26 @@
+{
+  "files": {
+    "index.js": [
+      {
+        "id": "1e7f7590-a064-48bf-9ee7-4fc10086f346",
+        "line": 35,
+        "version": 16259,
+        "index": 980
+      },
+      {
+        "id": "0a716910-d12a-413e-91d8-dd1eec67e7e2",
+        "line": 35,
+        "version": 16259,
+        "index": 980
+      }
+    ],
+    "scripts/weapons.js": [
+      {
+        "id": "db135b22-ec72-4fb4-98a8-89e6399c2314",
+        "line": 1,
+        "version": 0,
+        "index": 0
+      }
+    ]
+  }
+}
