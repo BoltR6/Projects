@@ -1,0 +1,25 @@
+{
+  "name": "threadgatemulti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@replit/database": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "curl": "^0.1.4",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "nodemon": "^2.0.12",
+    "p5": "^1.4.0",
+    "pg": "^8.7.1",
+    "readline": "^1.3.0",
+    "readline-sync": "^1.4.10",
+    "socket.io": "^4.2.0"
+  }
+}

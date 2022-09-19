@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js">
+
+	</script>
+</head>
+
+<body>
+	<script src="/socket.io/socket.io.js"></script>
+	</script>
+	<script>
+		var socket = io();
+		var socketTick = 2;
+
+		var x = 200;
+		var y = 200;
+		var players = [];
+		var keys = [];
+		var rotation = 0;
+
+		socket.on('STCgivePlayers', function(data){
+			if(frameCount < 10){
+				var yourind;
+				players.forEach((player, ind) => {
+					if(player.id === socket.id){
+						yourind = ind;
+					}
+				});
+				x = players[yourind].x;
+				y = players[yourind].y;
+			}
+			players = data.playerList;
+		});
+		function keyPressed(){
+			keys[keyCode] = true;
+		}
+		function keyReleased(){
+			keys[keyCode] = false;
+		}
+
+		function setup(){
+			createCanvas(300,300,P2D);
+		}
+		function draw(){
+			try{
+				var yourind;
+				players.forEach((player, ind) => {
+					if(player.id === socket.id){
+						yourind = ind;
+					}
+				});
+
+				background(255,0,255);
+				if(frameCount%socketTick === 1){
+					socket.emit('CTSgetPlayers');
+				}
+				var rotation = atan2(mouseY-y,mouseX-x);
+				if(keys[38]){
+					socket.emit('CTSadd',{description:[x,y,rotation]})
+					if(mouseX > x + 1 || mouseX < x - 1 || mouseY > x +)
+					x += cos(rotation)*2;
+					y += sin(rotation)*2;
+					
+				}
+				var rotation = atan2(mouseY-y,mouseX-x);
+				fill(255,0,0)
+				ellipse(x,y,15,15);
+				push();
+				translate(x,y);
+				rotate(rotation);
+				strokeWeight(5);
+				line(0,0,50,0);
+				pop();
+				for(var i = 0;i < players.length;i++){
+					if(players[i].id !== socket.id){
+						var rotation = atan2(mouseY-players[i].y,mouseX-players[i].x);
+						fill(255,0,0)
+						ellipse(players[i].x,players[i].y,15,15);
+						push();
+						translate(players[i].x,players[i].y);
+						rotate(players[i].r);
+						strokeWeight(5);
+						line(0,0,50,0);
+						pop();
+					}
+				}
+				text(yourind+"\n"+socket.id,200,200);
+			}catch (err){
+				background(255,0,0)
+				fill(0)
+				text(err+"\n"+err.lineNumber,50,50);
+			}
+		}
+	</script>
+</body>
+
+</html>
