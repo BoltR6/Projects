@@ -1,5 +1,5 @@
 - Early 2022
-- A piece of software that I wrote to calculate the best possible word for wordle.
+A piece of software that I wrote to calculate the best possible word for wordle.
 Three different generations with efficiency drastically increasing between each new iteration.
 Proof of concept for situations where a massive amount of computations are made and must be efficized, as well as some memory management and (sorta?) machine learning.
 
