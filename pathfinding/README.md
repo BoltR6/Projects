@@ -5,7 +5,7 @@ It's extremely efficient and works well for high tile count maps as well. This s
 
 ## Features:
 - Diagonals (press a key)
-- 20ms calculation time on average
+- 20ms calculation time on average 
 - Takes any size/dimension map as input
 - Open to adding a priority direction
 - Low memory usage
