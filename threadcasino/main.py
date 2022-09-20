@@ -24,7 +24,7 @@ name = ""
 w1 = False
 
 over = pymongo.MongoClient(
-    "mongodb+srv://access:7nyTvKABkC97pf55@threadcasino1.bxh4r.mongodb.net/threadcasino1?retryWrites=true&w=majority")
+    "REMOVED FOR SECURITY")
 overdb = over["user"]
 colC = overdb["username"]
 
