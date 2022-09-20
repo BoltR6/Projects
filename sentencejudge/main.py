@@ -8,6 +8,7 @@ import sys;
 
 #Fuctions
 def classify(text):
+    # Contact me at Bolt#0001 to have this key populated if you'd like a demonstration!
     key = "REMOVED FOR SECURITY"
     url = "https://machinelearningforkids.co.uk/api/scratch/"+ key + "/classify"
 
