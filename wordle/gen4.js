@@ -13,7 +13,7 @@ console.timeEnd('Init')
 console.log("Connecting to db...")
 console.time("DB Init")
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://bolt:pogging@cluster0.bxh4r.mongodb.net/Cluster0?retryWrites=true&w=majority";
+const uri = "REMOVED FOR SECURITY";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 var database;
 var all_db;
