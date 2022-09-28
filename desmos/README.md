@@ -1,7 +1,7 @@
 Mid 2022
 # A fully function graphing calculator. 
 
-Got bored and decided to create a Desmos clone in JS. Fairly? smooth and efficient, and serves Further proof that RegEx should be considered an esoteric language.
+Got bored in calc and decided to create a Desmos clone in JS. Fairly? smooth and efficient, and serves Further proof that RegEx should be considered an esoteric language. Sin and Cosine are built in, I may consider adding logs, eulers's constant, constant maniuplation, and PI as a constant in the future in the event that I decide to expand on this and add a derivative feature.
 ## Features:
 - Moveable Viewport 
 - Auto-translate a human written function to a set of instructions to be computed
